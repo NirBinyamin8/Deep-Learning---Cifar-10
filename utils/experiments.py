@@ -61,17 +61,9 @@ def run_experiment(run_name, out_dir='./results', seed=None,optimizer='Adam',wei
     # Select model class (experiment 1 or 2)
     model_cls = models.ConvClassifier if not ycn else models.YourCodeNet
 
-    # TODO: Train
-    # - Create model using model_cls(...).
-    # - Create a loss funciton -CrossEntropyLoss.
-    # - Create optimizer - torch.optim.Adam/torch.optim.SGD, with the fiven lr and reg as weight_decay.
-    # - Create a trainer (training.TorchTrainer) based on the parameters.
-    # - Use trainer.fit in order to run training , using dl_train and dl_val that have created for you, and save the FitResults in the fit_res variable.
-    # - The fit results and all the experiment parameters will then be saved for you automatically.
-    # - Use trainer.test_epoch using dl_test, and save the EpochResult in the test_epoch_result variable.
     fit_res = None
     test_epoch_result = None
-    # ====== YOUR CODE: ======
+
     # create model
     in_size = (3, 32, 32)
     model = model_cls(
